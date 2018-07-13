@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+  id SERIAL,
+  login TEXT,
+  email TEXT,
+  password TEXT,
+  enabled INT NOT NULL DEFAULT 1
+);

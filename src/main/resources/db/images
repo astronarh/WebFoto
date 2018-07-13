@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS images;
+CREATE TABLE images (
+  id SERIAL,
+  name varchar(45) NOT NULL,
+  bytes varchar NOT NULL,
+  user_id INT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

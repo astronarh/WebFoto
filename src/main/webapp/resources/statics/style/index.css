@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+#main_container {
+    width:800px; /*Ширина блока*/
+    height:600px; /*Высота блока*/
+    margin:0 auto;
+    overflow:visible;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-400px; /*Смещаем блок на половину всей ширины влево*/
+    margin-top:-400px; /*Смещаем блок на половину высоты вверх*/
+    background:#ffffff;
+}
+.main {
+    height:100%;
+}
+.main_in_main {
+    height:100%;
+}
+.content {
+    padding-top:0px;
+    height:200px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: #fff;
+    font:normal 16px/1.5 sans-serif;
+    color: #333;
+}
+
+h3{
+    font: normal 32px/1.5 'Open Sans', sans-serif;
+    color: #2c3e50;
+    margin: 50px 0;
+    text-align: center;
+}
+
+
+.container{
+    max-width: 1920px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #efefef;
+}
+
+.app{
+    width: 100%;
+    position: relative;
+}
+
+.app #start-camera{
+    display: none;
+    border-radius: 3px;
+    max-width: 400px;
+    color: #fff;
+    background-color: #448AFF;
+    text-decoration: none;
+    padding: 15px;
+    opacity: 0.8;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.app video#camera-stream{
+    display: none;
+    width: 100%;
+}
+
+.app img#snap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: none;
+}
+
+.app #error-message{
+    width: 100%;
+    background-color: #ccc;
+    color: #9b9b9b;
+    font-size: 28px;
+    padding: 200px 100px;
+    text-align: center;
+    display: none;
+}
+
+.app .controls{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 30px;
+    display: none;
+}
+
+.app .controls a{
+    border-radius: 50%;
+    color: #fff;
+    background-color: #111;
+    text-decoration: none;
+    padding: 15px;
+    line-height: 0;
+    opacity: 0.7;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.app .controls a:hover{
+    opacity: 1;
+}
+
+.app .controls a.disabled{
+    background-color: #555;
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
+
+.app .controls a.disabled:hover{
+    opacity: 0.5;
+}
+
+.app .controls a i{
+    font-size: 18px;
+}
+
+.app .controls #take-photo i{
+    font-size: 32px;
+}
+
+.app canvas{
+    display: none;
+}
+
+.app video#camera-stream.visible,
+.app img#snap.visible,
+.app #error-message.visible
+{
+    display: block;
+}
+
+.app .controls.visible{
+    display: flex;
+}
+
+@media(max-width: 1920px){
+    .container{
+        margin: 40px;
+    }
+
+    .app #start-camera.visible{
+        display: block;
+    }
+
+    .app .controls a i{
+        font-size: 16px;
+    }
+
+    .app .controls #take-photo i{
+        font-size: 24px;
+    }
+}
+
+
+@media(max-width: 1920px){
+    .container{
+        margin: 10px;
+    }
+
+    .app #error-message{
+        padding: 80px 50px;
+        font-size: 18px;
+    }
+
+    .app .controls a i{
+        font-size: 12px;
+    }
+
+    .app .controls #take-photo i{
+        font-size: 18px;
+    }
+}
+
+#selector{
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+    background: #43A047;
+}
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+.form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+.form .register-form {
+    display: none;
+}
+
+.smalImage {
+    cursor: pointer;
+}
+#imageControl {
+    position: fixed;
+    top:0;
+    right:0;
+}
+.imageControlButtons {
+    box-shadow: 0 0 10px rgba(255, 253, 89, 0.5);
+}
